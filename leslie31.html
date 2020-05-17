@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+ 
+  function verificarEntrada(control)
+  {
+    if (control.value.length<7)
+      alert('Clave debe tener mas de 7 caracteres');
+  }
+
+  if(control.value.length>20)
+  {
+      alert('Clave debe tener menos de 20 caracteres');
+  }
+</script>
+
+<form>
+  <input type="text" id="nombre" onFocus="vaciar(this)" 
+         onBlur="verificarEntrada(this)" value="nombre"><br>
+  <input type="password" id="clave" onFocus="vaciar(this)" 
+         onBlur="verificarEntrada(this)" value="clave">
+  <br>
+  <input type="button" value="Confirmar">
+</form>
+</body>
+</html>
+
